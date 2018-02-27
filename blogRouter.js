@@ -33,7 +33,7 @@ router.post('/', jsonParser, (req, res) => {
         if(!(field in req.body)) {
             const message = `Missing \`${field}\` in request body`
             console.error(message);
-            resturn res.status(400).send(message);
+            return res.status(400).send(message);
         }
     }
     const item = BlogPosts.create(
